@@ -5,7 +5,7 @@ function setup() {
 
 }
 
-// you always need a draw function in p5.js
+// you always need a draw function in p5.js		
 // this is the function that gets called continuously in the background
 // you can think of this function as what gets applied in each frame
 function draw() {
