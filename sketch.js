@@ -1,13 +1,18 @@
-// you always need a setup function in p5.js
-// this is the initial setup that gets applied
-// before you begin drawing
+/** 
+You always need a setup function in p5.js.
+This gets applied just once upon the initial
+load of your sketch.
+**/
 function setup() {
 
 }
 
-// you always need a draw function in p5.js		
-// this is the function that gets called continuously in the background
-// you can think of this function as what gets applied in each frame
+/** 
+You always need a draw function in p5.js.
+Right after setup(), gets executed, this gets called continuously 
+in the background. You can think of this function as 
+your primary animation loop––each "frame" of your sketch.
+**/
 function draw() {
 
 }
