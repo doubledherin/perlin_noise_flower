@@ -3,7 +3,10 @@
 var centerX
 var centerY
 var radius
-var totalDegrees = 360
+var totalDegrees = 369
+var r = 255
+var g = 128
+var b = 128
 
 function setup() {
     createCanvas(
@@ -15,11 +18,16 @@ function setup() {
     centerY = height / 2
     radius = height / 2
     angleMode(DEGREES)
+    translateX = 0
+    translateY = 0
+    opacity = 255
 }
 
 function draw() {
+    console.log("foo")
+    // translate(translateX, translateX)
     noFill()
-    stroke(255, 128, 128, 25)
+    stroke(r, g, b, opacity)
     beginShape()
         for (let i=0; i <=totalDegrees; i++) {
             var noiseFactor = noise(i / 40, frameCount / 120)
@@ -28,8 +36,30 @@ function draw() {
             curveVertex(x, y)
         }
     endShape(CLOSE)
-    if (radius <= 0) {
-        noLoop()
-    }
+    // if (radius <= 0) {
+    //     noLoop()
+    // }
     radius -= 0.65
+    if (frameCount > 200) {
+        translateX = 0
+        translateY = 0
+    }
+    if (r > 255) {
+        r = 0
+    }
+    if (g > 255) {
+        g = 0
+    }
+    if (b > 255) {
+        b = 0
+    }
+    if (opacity == 0) {
+        opacity = 255
+    }
+    translateX *= frameCount
+    translateY *= frameCount
+    opacity -= 1
+    r += 1
+    g += 1
+    b += 1
 }
