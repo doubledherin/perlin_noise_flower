@@ -1,5 +1,3 @@
-// http://xie-emily.com/generative_art/noise_flower.html
-
 var centerX
 var centerY
 var radius
@@ -25,7 +23,6 @@ function setup() {
 
 function draw() {
     console.log("foo")
-    // translate(translateX, translateX)
     noFill()
     stroke(r, g, b, opacity)
     beginShape()
@@ -36,9 +33,6 @@ function draw() {
             curveVertex(x, y)
         }
     endShape(CLOSE)
-    // if (radius <= 0) {
-    //     noLoop()
-    // }
     radius -= 0.65
     if (frameCount > 200) {
         translateX = 0
