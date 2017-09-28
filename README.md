@@ -1,2 +1,4 @@
-# p5_scaffold
-Basic p5 setup for workshop
+# Perlin noise flower
+Uses the P5.js library
+
+![alt text](http://url/to/img.png)
