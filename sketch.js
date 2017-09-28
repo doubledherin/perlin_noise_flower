@@ -22,7 +22,6 @@ function setup() {
 }
 
 function draw() {
-    console.log("foo")
     noFill()
     stroke(r, g, b, opacity)
     beginShape()
